@@ -8,7 +8,6 @@ const Details = () => (
     padding={10}
     spacing={10}
     alignItems='flex-start'
-    background='pink'
   >
     <VStack spacing={3} alignItems='flex-start'>
       <Heading size='2xl'>

@@ -7,7 +7,6 @@ const Cart = () => (
       padding={10}
       spacing={10}
       alignItems='flex-start'
-      background='lightblue'
     />
   )
 
