@@ -1,4 +1,5 @@
 import { Heading, Text, VStack } from '@chakra-ui/react'
+import Form from './Form'
 
 const Details = () => (
   <VStack
@@ -16,6 +17,7 @@ const Details = () => (
       <Text>
         If you already have an account, click here to log in
       </Text>
+      <Form />
     </VStack>
   </VStack>
 )
