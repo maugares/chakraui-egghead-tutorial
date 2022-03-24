@@ -1,3 +1,8 @@
-const IndexPage = () => <h1>Hello Next.js</h1>
+import { Container } from '@chakra-ui/react'
+
+const IndexPage = () => {
+  return <Container>
+  </Container>
+}
 
 export default IndexPage
