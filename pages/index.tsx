@@ -9,7 +9,7 @@ import { Container } from '@chakra-ui/react'
 */
 
 const IndexPage = () => (
-  <Container maxW="container.xl" p={0}>
+  <Container maxWidth="container.xl" padding={0}>
   </Container>
 )
 
