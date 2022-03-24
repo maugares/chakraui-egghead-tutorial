@@ -1,4 +1,4 @@
-import { Heading, VStack } from '@chakra-ui/react'
+import { Heading, Text, VStack } from '@chakra-ui/react'
 
 const Details = () => (
   <VStack
@@ -12,6 +12,9 @@ const Details = () => (
     <Heading size='2xl'>
       Your Details
     </Heading>
+    <Text>
+      If you already have an account, click here to log in
+    </Text>
   </VStack>
 )
 
