@@ -3,6 +3,7 @@ import {
   FormLabel,
   GridItem,
   Input,
+  Select,
   SimpleGrid
 } from '@chakra-ui/react'
 
@@ -48,6 +49,15 @@ const Form = () => (
       <FormControl>
         <FormLabel>Postcode</FormLabel>
         <Input placeholder='1234AB' />
+      </FormControl>
+    </GridItem>
+    <GridItem colSpan={12}>
+      <FormControl>
+        <FormLabel>Delivery Mode</FormLabel>
+        <Select>
+          <option value='personal'>Personal</option>
+          <option value='business'>business</option>
+        </Select>
       </FormControl>
     </GridItem>
   </SimpleGrid>
