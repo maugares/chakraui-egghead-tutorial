@@ -9,50 +9,26 @@ import {
   SimpleGrid
 } from '@chakra-ui/react'
 
+const inputFields = [
+  { span: 6, label: 'First Name', placeholder: 'John' },
+  { span: 6, label: 'Last Name', placeholder: 'Doe' },
+  { span: 8, label: 'Address', placeholder: 'Hoofdstraat' },
+  { span: 2, label: 'nr.', placeholder: '1' },
+  { span: 2, label: 'add.', placeholder: 'HS' },
+  { span: 8, label: 'City', placeholder: 'Amsterdam' },
+  { span: 4, label: 'Postcode', placeholder: '1234AB' }
+]
+
 const Form = () => (
   <SimpleGrid columns={12} columnGap={3} rowGap={6}>
-    <GridItem colSpan={6}>
-      <FormControl>
-        <FormLabel>First Name</FormLabel>
-        <Input placeholder='John' />
-      </FormControl>
-    </GridItem>
-    <GridItem colSpan={6}>
-      <FormControl>
-        <FormLabel>Last Name</FormLabel>
-        <Input placeholder='Doe' />
-      </FormControl>
-    </GridItem>
-    <GridItem colSpan={8}>
-      <FormControl>
-        <FormLabel>Address</FormLabel>
-        <Input placeholder='Hoofdstraat 1' />
-      </FormControl>
-    </GridItem>
-    <GridItem colSpan={2}>
-      <FormControl>
-        <FormLabel>nr.</FormLabel>
-        <Input placeholder='1' />
-      </FormControl>
-    </GridItem>
-    <GridItem colSpan={2}>
-      <FormControl>
-        <FormLabel>add.</FormLabel>
-        <Input placeholder='HS' />
-      </FormControl>
-    </GridItem>
-    <GridItem colSpan={8}>
-      <FormControl>
-        <FormLabel>City</FormLabel>
-        <Input placeholder='Amsterdam' />
-      </FormControl>
-    </GridItem>
-    <GridItem colSpan={4}>
-      <FormControl>
-        <FormLabel>Postcode</FormLabel>
-        <Input placeholder='1234AB' />
-      </FormControl>
-    </GridItem>
+    {inputFields.map(field => (
+      <GridItem colSpan={field.span}>
+        <FormControl>
+          <FormLabel>{field.label}</FormLabel>
+          <Input placeholder={field.placeholder} />
+        </FormControl>
+      </GridItem>
+    ))}
     <GridItem colSpan={12}>
       <FormControl>
         <FormLabel>Delivery Mode</FormLabel>
@@ -63,9 +39,7 @@ const Form = () => (
       </FormControl>
     </GridItem>
     <GridItem colSpan={12}>
-      <Checkbox defaultChecked>
-        Ship to billing address
-      </Checkbox>
+      <Checkbox defaultChecked>Ship to billing address</Checkbox>
     </GridItem>
     <GridItem colSpan={12}>
       <Button size='lg' width='full'>
