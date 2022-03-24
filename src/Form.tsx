@@ -1,4 +1,5 @@
 import {
+  Checkbox,
   FormControl,
   FormLabel,
   GridItem,
@@ -59,6 +60,11 @@ const Form = () => (
           <option value='business'>business</option>
         </Select>
       </FormControl>
+    </GridItem>
+    <GridItem colSpan={12}>
+      <Checkbox defaultChecked>
+        Ship to billing address
+      </Checkbox>
     </GridItem>
   </SimpleGrid>
 )
