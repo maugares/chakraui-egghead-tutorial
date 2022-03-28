@@ -22,7 +22,7 @@ const inputFields = [
 const Form = () => (
   <SimpleGrid columns={12} columnGap={3} rowGap={6}>
     {inputFields.map(field => (
-      <GridItem colSpan={field.span}>
+      <GridItem key={field.label} colSpan={field.span}>
         <FormControl>
           <FormLabel>{field.label}</FormLabel>
           <Input placeholder={field.placeholder} />

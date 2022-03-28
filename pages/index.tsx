@@ -1,6 +1,6 @@
 import { Container, Flex, VStack } from '@chakra-ui/react'
-import Cart from '../src/Cart'
-import Details from '../src/Details'
+import Cart from '../src/Cart/Cart'
+import Details from '../src/Details/Details'
 
 // For explanation on style props see README.md
 
