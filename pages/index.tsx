@@ -7,7 +7,11 @@ import Details from '../src/Details/Details'
 
 const IndexPage = () => (
   <Container maxWidth='container.xl' padding={0}>
-    <Flex height='100vh' paddingY={[0, 10, 20]}>
+    <Flex
+      height='100vh'
+      paddingY={[0, 10, 20]}
+      direction={{ base: 'column-reverse', md: 'row' }}
+    >
       <Details />
       <Cart />
     </Flex>
