@@ -4,6 +4,7 @@ import {
   withDefaultColorScheme,
   withDefaultVariant
 } from '@chakra-ui/react'
+import { mode } from '@chakra-ui/theme-tools'
 
 const inputSelectStyles = {
   sizes: { md: { field: { borderRadius: 'none' } } },
@@ -59,10 +60,11 @@ const theme = extendTheme(
     components: {
       Button: {
         variants: {
-          primary: {
+          primary: props => ({
             rounded: 'none',
-            ...brandRing
-          }
+            ...brandRing,
+            backgroundColor: mode('brand.500', 'brand.200')(props)
+          })
         }
       },
       Input: inputSelectStyles,
