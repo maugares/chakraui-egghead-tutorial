@@ -19,8 +19,8 @@ import { extendTheme, theme as base } from '@chakra-ui/react'
 
 const theme = extendTheme({
   fonts: {
-    heading: `Roboto, ${base.fonts?.heading}`,
-    body: `Arial, ${base.fonts?.heading}`
+    heading: `Montserrat, ${base.fonts?.heading}`,
+    body: `Inter, ${base.fonts?.heading}`
   }
 })
 
