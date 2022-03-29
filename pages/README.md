@@ -7,3 +7,9 @@
 - design tokens have long and short forms: width (w), height (h), padding (p), margin (m), etc
 - spaces integers are 4x in pixels: 10 == 40px
 - background and backgroundColor are interchangeable
+
+
+- 3 ways to provide different values:
+  - array syntax: allows to provide different values for every breakpoint
+  - object syntax: good for changing between two values (simpler)
+  - useBreakpointValue hook: allows to create responsive values (useful for making variant or size props responsive)
