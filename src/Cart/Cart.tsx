@@ -9,12 +9,15 @@ import {
   HStack,
   Stack,
   Divider,
+  Button,
   useColorMode,
-  Button
+  useColorModeValue
 } from '@chakra-ui/react'
 
 const Cart = () => {
   const { toggleColorMode } = useColorMode()
+  const backgroundColor = useColorModeValue('gray.50', 'whiteAlpha.50')
+  const secondaryTextColor = useColorModeValue('gray.600', 'gray.400')
 
   return (
     <VStack
@@ -23,10 +26,11 @@ const Cart = () => {
       padding={10}
       spacing={6}
       align='flex-start'
+      backgroundColor={backgroundColor}
     >
       <VStack spacing={3} alignItems='flex-start'>
         <Heading size='2xl'>Your cart</Heading>
-        <Text>
+        <Text color={secondaryTextColor}>
           If the price is too hard on your eyes,{' '}
           <Button onClick={toggleColorMode} variant='link' colorScheme='black'>
             try changing the theme.
@@ -44,7 +48,7 @@ const Cart = () => {
         </AspectRatio>
         <VStack width='full' spacing={0} alignItems='flex-start'>
           <Heading size='md'>Penny board</Heading>
-          <Text>PNYCOMP27541</Text>
+          <Text color={secondaryTextColor}>PNYCOMP27541</Text>
         </VStack>
         <Heading size='sm' textAlign='end'>
           $119.00
@@ -52,21 +56,21 @@ const Cart = () => {
       </HStack>
       <VStack spacing={4} alignItems='stretch' width='full'>
         <HStack justifyContent='space-between'>
-          <Text>Subtotal</Text>
+          <Text color={secondaryTextColor}>Subtotal</Text>
           <Heading size='sm'>$119.00</Heading>
         </HStack>
         <HStack justifyContent='space-between'>
-          <Text>Shipping</Text>
+          <Text color={secondaryTextColor}>Shipping</Text>
           <Heading size='sm'>$19.99</Heading>
         </HStack>
         <HStack justifyContent='space-between'>
-          <Text>Taxes (estimated)</Text>
+          <Text color={secondaryTextColor}>Taxes (estimated)</Text>
           <Heading size='sm'>$23.80</Heading>
         </HStack>
       </VStack>
       <Divider />
       <HStack justifyContent='space-between' width='full'>
-        <Text>Total</Text>
+        <Text color={secondaryTextColor}>Total</Text>
         <Heading size='lg'>$162.79</Heading>
       </HStack>
     </VStack>
