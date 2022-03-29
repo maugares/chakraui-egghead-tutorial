@@ -11,6 +11,12 @@ const inputSelectStyles = {
     filled: { field: { _focus: { borderColor: 'brand.500' } } }
   }
 }
+const brandRing = {
+  _focus: {
+    ring: 2,
+    ringColor: 'brand.500'
+  }
+}
 // extendTheme options: {
 //   breakpoints: '',
 //   zIndices: '',
@@ -51,15 +57,21 @@ const theme = extendTheme(
       body: `Inter, ${base.fonts?.body}`
     },
     components: {
+      Button: {
+        variants: {
+          primary: {
+            rounded: 'none',
+            ...brandRing
+          }
+        }
+      },
       Input: inputSelectStyles,
       Select: inputSelectStyles,
       Checkbox: {
         baseStyle: {
           control: {
             borderRadius: 'none',
-            _focus: {
-              ring: 2, ringColor: 'brand.500'
-            }
+            ...brandRing
           }
         }
       }

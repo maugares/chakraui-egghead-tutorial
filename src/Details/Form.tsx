@@ -54,7 +54,7 @@ const Form = () => {
         <Checkbox defaultChecked>Ship to billing address.</Checkbox>
       </GridItem>
       <GridItem colSpan={2}>
-        <Button size='lg' width='full' colorScheme='brand'>
+        <Button size='lg' width='full' variant='primary'>
           Place order
         </Button>
       </GridItem>
