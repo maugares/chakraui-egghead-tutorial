@@ -27,7 +27,7 @@ const Form = () => {
           <Input placeholder='Doe' />
         </FormControl>
       </GridItem>
-      <GridItem colSpan={colSpan}>
+      <GridItem colSpan={2}>
         <FormControl>
           <FormLabel>Address</FormLabel>
           <Input placeholder='Blvd. Broken Dreams 21' />
@@ -50,11 +50,11 @@ const Form = () => {
           </Select>
         </FormControl>
       </GridItem>
-      <GridItem colSpan={colSpan}>
+      <GridItem colSpan={2}>
         <Checkbox defaultChecked>Ship to billing address.</Checkbox>
       </GridItem>
-      <GridItem colSpan={colSpan}>
-        <Button size='lg' width='full'>
+      <GridItem colSpan={2}>
+        <Button size='lg' width='full' colorScheme='brand'>
           Place order
         </Button>
       </GridItem>
