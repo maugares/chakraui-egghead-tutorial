@@ -9,44 +9,54 @@ import {
   SimpleGrid
 } from '@chakra-ui/react'
 
-const inputFields = [
-  { span: 6, label: 'First Name', placeholder: 'John' },
-  { span: 6, label: 'Last Name', placeholder: 'Doe' },
-  { span: 8, label: 'Address', placeholder: 'Hoofdstraat' },
-  { span: 2, label: 'nr.', placeholder: '1' },
-  { span: 2, label: 'add.', placeholder: 'HS' },
-  { span: 8, label: 'City', placeholder: 'Amsterdam' },
-  { span: 4, label: 'Postcode', placeholder: '1234AB' }
-]
-
-const Form = () => (
-  <SimpleGrid columns={12} columnGap={3} rowGap={6}>
-    {inputFields.map(field => (
-      <GridItem key={field.label} colSpan={field.span}>
+const Form = () => {
+  return (
+    <SimpleGrid columns={2} columnGap={3} rowGap={6} w='full'>
+      <GridItem colSpan={6}>
         <FormControl>
-          <FormLabel>{field.label}</FormLabel>
-          <Input placeholder={field.placeholder} />
+          <FormLabel>First Name</FormLabel>
+          <Input placeholder='John' />
         </FormControl>
       </GridItem>
-    ))}
-    <GridItem colSpan={12}>
-      <FormControl>
-        <FormLabel>Delivery Mode</FormLabel>
-        <Select>
-          <option value='personal'>Personal</option>
-          <option value='business'>business</option>
-        </Select>
-      </FormControl>
-    </GridItem>
-    <GridItem colSpan={12}>
-      <Checkbox defaultChecked>Ship to billing address</Checkbox>
-    </GridItem>
-    <GridItem colSpan={12}>
-      <Button size='lg' width='full'>
-        Ship to billing address
-      </Button>
-    </GridItem>
-  </SimpleGrid>
-)
+      <GridItem colSpan={6}>
+        <FormControl>
+          <FormLabel>Last Name</FormLabel>
+          <Input placeholder='Doe' />
+        </FormControl>
+      </GridItem>
+      <GridItem colSpan={12}>
+        <FormControl>
+          <FormLabel>Address</FormLabel>
+          <Input placeholder='Blvd. Broken Dreams 21' />
+        </FormControl>
+      </GridItem>
+      <GridItem colSpan={6}>
+        <FormControl>
+          <FormLabel>City</FormLabel>
+          <Input placeholder='San Francisco' />
+        </FormControl>
+      </GridItem>
+      <GridItem colSpan={6}>
+        <FormControl>
+          <FormLabel>Country</FormLabel>
+          <Select>
+            <option value='usa'>United States of America</option>
+            <option value='uae'>United Arab Emirates</option>
+            <option value='nmk'>North Macedonia</option>
+            <option value='de'>Germany</option>
+          </Select>
+        </FormControl>
+      </GridItem>
+      <GridItem colSpan={12}>
+        <Checkbox defaultChecked>Ship to billing address.</Checkbox>
+      </GridItem>
+      <GridItem colSpan={12}>
+        <Button size='lg' width='full'>
+          Place order
+        </Button>
+      </GridItem>
+    </SimpleGrid>
+  )
+}
 
 export default Form
