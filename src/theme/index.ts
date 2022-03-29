@@ -5,6 +5,12 @@ import {
   withDefaultVariant
 } from '@chakra-ui/react'
 
+const inputSelectStyles = {
+  sizes: { md: { field: { borderRadius: 'none' } } },
+  variants: {
+    filled: { field: { _focus: { borderColor: 'brand.500' } } }
+  }
+}
 // extendTheme options: {
 //   breakpoints: '',
 //   zIndices: '',
@@ -43,6 +49,10 @@ const theme = extendTheme(
     fonts: {
       heading: `Montserrat, ${base.fonts?.heading}`,
       body: `Inter, ${base.fonts?.body}`
+    },
+    components: {
+      Input: inputSelectStyles,
+      Select: inputSelectStyles
     }
   },
   withDefaultColorScheme({
