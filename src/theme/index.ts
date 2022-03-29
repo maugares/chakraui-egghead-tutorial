@@ -1,4 +1,4 @@
-import { extendTheme } from '@chakra-ui/react'
+import { extendTheme, theme as base } from '@chakra-ui/react'
 
 // extendTheme options: {
 //   breakpoints: '',
@@ -18,7 +18,10 @@ import { extendTheme } from '@chakra-ui/react'
 // }
 
 const theme = extendTheme({
-  fonts: {heading: 'Roboto', body: 'Arial'}
+  fonts: {
+    heading: `Roboto, ${base.fonts?.heading}`,
+    body: `Arial, ${base.fonts?.heading}`
+  }
 })
 
 export default theme
